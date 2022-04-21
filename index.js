@@ -16,9 +16,13 @@ const users = [
     { id: 7, name: 'sohana', email: 'sohana@gmail.com', phone: '0178888888' },
 ]
 
-app.get('/users', (req, res) => {
-    res.send(users)
+app.get('/fruits', (req, res) => {
+    res.send(['mango', 'orangews', 'banana', 'apple']);
 }) 
+
+app.get('/fruits/mango/fazli', (req, res) => {
+    res.send('sour fazli flavour')
+})
 
 app.get('/user/:id', (req, res) => {
     console.log(req.params);
